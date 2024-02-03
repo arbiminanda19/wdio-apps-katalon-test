@@ -1,0 +1,16 @@
+{
+  "keywordFileContentHash": "15E2FA1CAB2F4C38432F3A8429E1A373",
+  "keywordClasses": [
+    {
+      "name": "helpers.scroll",
+      "keywordMethods": [
+        {
+          "name": "horizontal",
+          "parameters": [],
+          "javadoc": ""
+        }
+      ]
+    }
+  ],
+  "javadocParsed": true
+}
