@@ -20,14 +20,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public class scroll {
+import java.util.regex.Pattern
+import java.util.regex.Matcher
+import com.kms.katalon.core.util.KeywordUtil
+
+public class asserts {
 
 	@Keyword
-	def horizontal() {
-		Integer start_x = 0.7 * Mobile.getDeviceWidth()
-		Integer start_y = 0.6 * Mobile.getDeviceHeight()
-		Integer end_x = 0.3 * Mobile.getDeviceWidth()
-		Integer end_y = 0.6 * Mobile.getDeviceHeight()
-		Mobile.swipe(start_x, start_y, end_x, end_y)
+	def verifyContainsText(String target, String subString) {
+
+		Boolean result = false
+		String regexPattern = subString
+		Pattern pattern = Pattern.compile(regexPattern, Pattern.CASE_INSENSITIVE)
+		Matcher matcher = pattern.matcher(target)
+		if (!matcher.find()) {
+			KeywordUtil.markFailed('The text does not contain the expected substring.')
+		}
 	}
 }

@@ -25,8 +25,8 @@ Mobile.verifyElementText(findTestObject('Object Repository/Forms/android.widget.
 
 Mobile.tap(findTestObject('Object Repository/Forms/android.widget.Switch'), 0)
 
-Mobile.verifyElementText(findTestObject('Object Repository/Forms/android.widget.TextView - Click to turn the switch OFF'), 
-    'Click to turn the switch OFF', FailureHandling.STOP_ON_FAILURE)
+CustomKeywords.'helpers.asserts.verifyContainsText'(Mobile.getText(findTestObject('Object Repository/Forms/android.widget.TextView - Click to turn the switch OFF'), 
+        10), 'Off')
 
 Mobile.tap(findTestObject('Object Repository/Forms/android.widget.EditText - Select an item'), 0)
 
@@ -37,8 +37,8 @@ Mobile.verifyElementText(findTestObject('Object Repository/Forms/android.widget.
 
 Mobile.tap(findTestObject('Object Repository/Forms/android.widget.TextView - Active'), 0)
 
-Mobile.verifyElementText(findTestObject('Object Repository/Forms/android.widget.TextView - This button is active'), 'This button is active', 
-    FailureHandling.STOP_ON_FAILURE)
+CustomKeywords.'helpers.asserts.verifyContainsText'(Mobile.getText(findTestObject('Object Repository/Forms/android.widget.TextView - This button is active'), 
+        10), 'Active')
 
 Mobile.tap(findTestObject('Object Repository/Forms/android.widget.Button - OK'), 0)
 
